@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Exchange Money</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <h1>Caculator</h1>
 <body>
@@ -15,12 +16,6 @@
     </tr>
     <tr>
         <td><input type="number" name="Amount" id="Amount" ></td>
-<!--        <td><select id="age-range" name="age-range">-->
-<!--            <option value="18-24">18-24</option>-->
-<!--            <option value="25-34">25-34</option>-->
-<!--            <option value="35-50">35-50</option>-->
-<!--            <option value="50+">50+</option>-->
-<!--        </select></td>-->
         <td><select id="from" name="From Currency">
             <option value="VND">VietNam</option>
             <option value="USD">USD</option>
@@ -47,7 +42,7 @@
         } else {
             document.getElementById("result").innerHTML = amount;
         }
-        console.log(amount, from, to)
+        // console.log(amount, from, to)
 
     }
 

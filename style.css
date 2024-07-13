@@ -1,0 +1,18 @@
+button {
+    background-color: #864caf;
+    color: white;
+    border: #dddddd;
+}
+h1{
+    margin-bottom: 20px
+}
+table {
+    border-collapse: collapse;
+    width: 50%;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+th,td{
+    padding: 15px;
+    text-align: left;
+}

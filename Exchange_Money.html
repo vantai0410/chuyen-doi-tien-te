@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exchange Money</title>
+</head>
+<h1>Caculator</h1>
+<body>
+<table>
+    <tr>
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+        <th></th>
+    </tr>
+    <tr>
+        <td><input type="number" name="Amount" id="Amount" ></td>
+<!--        <td><select id="age-range" name="age-range">-->
+<!--            <option value="18-24">18-24</option>-->
+<!--            <option value="25-34">25-34</option>-->
+<!--            <option value="35-50">35-50</option>-->
+<!--            <option value="50+">50+</option>-->
+<!--        </select></td>-->
+        <td><select id="from" name="From Currency">
+            <option value="VND">VietNam</option>
+            <option value="USD">USD</option>
+        </select> </td>
+        <td><select id="to" name="To Currency">
+            <option value="USD">USD</option>
+            <option value="VND">VietNam</option>
+        </select> </td>
+        <td><button onclick="exchangeMoney()">Convert</button></td>
+    </tr>
+</table>
+<p id="result"></p>
+<script>
+    function exchangeMoney(){
+        let amount = document.getElementById("Amount").value;
+        let from = document.getElementById("from").value;
+        let to = document.getElementById("to").value;
+        if (from === "VND" && to === "USD") {
+            amount = amount/25000
+            document.getElementById("result").innerText = "Result: " + amount +" USD"
+        } else if (from === "USD" && to === "VND") {
+            amount = amount*25000
+            document.getElementById("result").innerText = "Result: " + amount +" VND"
+        } else {
+            document.getElementById("result").innerHTML = amount;
+        }
+        console.log(amount, from, to)
+
+    }
+
+
+
+</script>
+</body>
+</html>
